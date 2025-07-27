@@ -8,7 +8,6 @@ const TrayLoadingSchema = new mongoose.Schema({
 
   totalTraysLoaded: { type: Number, required: true },
   totalEmptyTrays: { type: Number, default: 0 },
-
   
   confirmedByAreaIncharge: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
   status: { type: Boolean, default: false }, // false = pending, true = confirmed

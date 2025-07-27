@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema({
     ]
   },
   isActive: { type: Boolean, default: true },
-  mobileNumber: { type: String, required: true},
+  mobileNumber: { type: String, required: true,unique: true },
   createdAt: { type: Date, default: Date.now },
   isVerified: { type: Boolean, default: false }
 });

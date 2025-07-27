@@ -25,6 +25,8 @@ const registerVehicleSchema = Joi.object({
   })
 });
 
+
+
 module.exports = {
-  registerVehicleSchema
+  registerVehicleSchema,
 };

@@ -5,6 +5,9 @@ const connectDB = require('./config/db');
 const authRoutes = require('./v1/routes/authRoutes');
 const vehicleRoutes = require('./v1/routes/vehicleRoutes')
 const deliveryPointRoutes = require('./v1/routes/deliveryPointRoutes')
+const traysRoutes = require('./v1/routes/traysRoutes')
+const userRoutes = require('./v1/routes/userRoutes'); // Ensure this is defined after the
+
 dotenv.config();
 const app = express();
 
@@ -14,8 +17,10 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/users', userRoutes);
 app.use('/api/v1/vehicles',vehicleRoutes );
 app.use('/api/v1/delivery', deliveryPointRoutes);
+app.use('/api/v1/trays', traysRoutes);
 
 
 const PORT = process.env.PORT || 5000;
